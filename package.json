@@ -1,0 +1,19 @@
+{
+  "name": "skillmatrix",
+  "version": "1.0.0",
+  "description": "backend for skillmatrix",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kelleher92/sm-be.git"
+  },
+  "author": "liua",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kelleher92/sm-be/issues"
+  },
+  "homepage": "https://github.com/Kelleher92/sm-be#readme"
+}
