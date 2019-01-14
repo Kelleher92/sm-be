@@ -1,5 +1,6 @@
 'use strict';
 import * as dotenv from 'dotenv';
+import configureMongoose from './server/config/mongoose.config'
 dotenv.config();
 // load express configuration
 import configureApp from './server/config/express.config';
@@ -7,12 +8,12 @@ import configureApp from './server/config/express.config';
 // import configureMySql from './server/config/mySqlDB.config';
 
 const app = configureApp();
-// configureMongoose();
+configureMongoose();
 // configureMySql();
 
-// start application server on port 3000.
-const server = app.listen(process.env.PORT || 3000, () => {
-  console.log(`API started on port ${process.env.PORT} (${process.env.NODE_ENV})`);  // tslint:disable-line:no-console
+// start application server on port 3111.
+const server = app.listen(process.env.PORT || 3111, () => {
+  console.log(`API started on port ${process.env.PORT}`);  // tslint:disable-line:no-console
 });
 
 // Hot module reload

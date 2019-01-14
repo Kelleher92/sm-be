@@ -4,7 +4,14 @@
   "description": "backend for skillmatrix",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -r ts-node/register ./test/**/*.ts",
+    "build:apidoc": "apidoc -i ./dist -o ./dist/docs/apidoc -e ./node_modules",
+    "build:swagger": "apidoc-swagger -i ./dist -o ./dist/docs/swagger -e ./node_modules",
+    "build:docs": "npm run build:apidoc && npm run build:swagger",
+    "build": "tsc",
+    "dev": "nodemon ./index",
+    "start": "npm run build && node ./dist/index",
+    "npm-build": "npm run build"
   },
   "repository": {
     "type": "git",
