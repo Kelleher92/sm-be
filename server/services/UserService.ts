@@ -11,3 +11,6 @@ export const createUser = (req, res) => {
         res.json(result);
     });
 }
+
+// EditUser
+
