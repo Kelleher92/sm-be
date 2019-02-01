@@ -14,15 +14,15 @@ export const createUser = (req, res) => {
 
 export const listUsers = (req, res) => {
     User.find({}, function(err, users) {
-        var userMap = {};
-
+        let userMap = {};
         users.forEach(function(user) {
             userMap[user._id] = user;
         });
-
-        res.send(userMap);
+        res.json(userMap);
     });
 }
+
+
 
 // EditUser
 
