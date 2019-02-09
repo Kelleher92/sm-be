@@ -2,6 +2,7 @@ import User from '../models/user'
 
 export const userLogin = (req, res) => {
     // new logic
+
 }
 
 export const createUser = (req, res) => {
