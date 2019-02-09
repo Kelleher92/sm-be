@@ -1,6 +1,11 @@
 import * as mongoose from 'mongoose';
 import * as passportLocalMongoose from 'passport-local-mongoose';
 
+const skillSchema = new mongoose.Schema({
+  skill: String,
+  strength: Number,
+});
+
 const userSchema = new mongoose.Schema({
   firstName: String,
   lastName: String,
@@ -8,7 +13,7 @@ const userSchema = new mongoose.Schema({
   level: String,
   dept: String,
   image: String,
-  skills: [],
+  skills: [skillSchema],
   hash: String,
   salt: String,
 });
